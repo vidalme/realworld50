@@ -1,0 +1,5 @@
+private-key
+private-key/*
+.terraform
+.terraform/*
+tests
