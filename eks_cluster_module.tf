@@ -1,13 +1,12 @@
 resource "aws_eks_cluster" "eks_cluster" {
 
   name = local.eks_cluster_name
-
-  access_config {
-    authentication_mode = "API"
-  }
-
   role_arn = aws_iam_role.cluster_role.arn
   version  = var.cluster_version
+
+  access_config {
+    authentication_mode = "CONFIG_MAP"
+  }
 
   vpc_config {
     subnet_ids = module.vpc.public_subnets
