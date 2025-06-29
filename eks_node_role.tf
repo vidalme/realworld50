@@ -28,7 +28,7 @@ resource aws_iam_role_policy_attachment "node-attach-AmazonEKS_CNI_Policy" {
   role       = aws_iam_role.node_role.name
 }
 
-resource aws_iam_role_policy_attachment "node-attach-AmazonEC2ContainerRegistryPullOnly" {
-  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryPullOnly"
+resource aws_iam_role_policy_attachment "node-attach-AmazonEC2ContainerRegistryReadOnly" {
+  policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   role       = aws_iam_role.node_role.name
 }
