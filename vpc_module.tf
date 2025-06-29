@@ -5,7 +5,7 @@ data "aws_availability_zones" "available" {
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "~> 5.0"  # Use a newer version
+  version = "~> 5.0" # Use a newer version
 
   # vpc details
   name            = "vpc-${local.project_name}"
@@ -31,14 +31,14 @@ module "vpc" {
   vpc_tags = local.common_tags
 
   public_subnet_tags = {
-    Type = "Public Subnets"
-    "kubernetes.io/role/elb" = 1    
-    "kubernetes.io/cluster/${local.eks_cluster_name}" = "shared"    
+    Type                                              = "Public Subnets"
+    "kubernetes.io/role/elb"                          = 1
+    "kubernetes.io/cluster/${local.eks_cluster_name}" = "shared"
   }
-  
+
   private_subnet_tags = {
-    Type = "Private Subnets"
-    "kubernetes.io/role/elb" = 1    
+    Type                                              = "Private Subnets"
+    "kubernetes.io/role/elb"                          = 1
     "kubernetes.io/cluster/${local.eks_cluster_name}" = "shared"
   }
 

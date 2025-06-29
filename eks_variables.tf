@@ -11,7 +11,7 @@ variable "cluster_service_ipv4_cidr" {
 
 variable "cluster_version" {
   description = "Kubernetes minor version to use for the EKS cluster (for example 1.31)"
-  type = string
+  type        = string
   default     = null
 }
 

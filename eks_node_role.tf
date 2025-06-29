@@ -18,17 +18,17 @@ resource "aws_iam_role" "node_role" {
   tags = local.common_tags
 }
 
-resource aws_iam_role_policy_attachment "node-attach-AmazonEKSWorkerNodePolicy" {
+resource "aws_iam_role_policy_attachment" "node-attach-AmazonEKSWorkerNodePolicy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKSWorkerNodePolicy"
   role       = aws_iam_role.node_role.name
 }
 
-resource aws_iam_role_policy_attachment "node-attach-AmazonEKS_CNI_Policy" {
+resource "aws_iam_role_policy_attachment" "node-attach-AmazonEKS_CNI_Policy" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEKS_CNI_Policy"
   role       = aws_iam_role.node_role.name
 }
 
-resource aws_iam_role_policy_attachment "node-attach-AmazonEC2ContainerRegistryReadOnly" {
+resource "aws_iam_role_policy_attachment" "node-attach-AmazonEC2ContainerRegistryReadOnly" {
   policy_arn = "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryReadOnly"
   role       = aws_iam_role.node_role.name
 }

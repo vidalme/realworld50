@@ -5,5 +5,5 @@ locals {
     Environment = var.environment
     Project     = local.project_name
   }
-  eks_cluster_name = "${local.project_name}-cluster" 
+  eks_cluster_name = "${local.project_name}-cluster"
 }
