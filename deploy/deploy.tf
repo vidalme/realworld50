@@ -1,4 +1,4 @@
-resource "kubernetes_deployment_v1" "example" {
+resource "kubernetes_deployment_v1" "myapp1" {
   metadata {
     name = "myapp1-deployment"
     labels = {
