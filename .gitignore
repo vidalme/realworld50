@@ -3,3 +3,5 @@ private-key/*
 .terraform
 .terraform/*
 tests
+*.tfstate
+*.tfstate.*
