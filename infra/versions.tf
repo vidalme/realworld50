@@ -7,10 +7,6 @@ terraform {
     }
   }
 
-  backend "" {
-    
-  }
-
   backend "s3" {
     bucket = "eks-terraform-andre"
     key    = "dev/eks-cluster/terraform.tfstate"
@@ -20,4 +16,6 @@ terraform {
     dynamodb_table = "dev-ekscluster"    
   }  
 }
+    
+
 
